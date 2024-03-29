@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #000;
+}
+
+
+/* Hero section  */
+
+.navbar{
+  position: sticky; /* position: absolute;  is breaking the flow*/
+  top: 0; /* important */
+  z-index: 1;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: white; /* Change text color as needed */
+}
+
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 5px;
+  width: 90%;
+  height: 2px;
+  background-color: #FFC107; /* Yellow color */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+#hero{
+  position: relative;
+}
+
+#hero .img img{
+  opacity: .7;
+}
+
+.intro{
+  align-items: center;
+  justify-content: space-around;
+}
+
+.greet, .name span{
+  color: #FFC107;
+}
+
+.greet{
+  align-self: start;
+  letter-spacing: 2px;
+}
+
+#hero .d-flex{
+  gap: clamp(7px, 3vw, 15px);
+}
+
+.buttons{
+  gap: 10px;
+}
+
+.btn{
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.btn-warning:hover{
+  background-color: rgb(255, 221, 0);
+}
+
+
+
+/* About section  */
+
+#aboutSection{
+  position: relative;
+}
+
+.big{
+  font-size: clamp(5rem, 8vw, 11rem);
+  position: absolute;
+  z-index: -1;
+  opacity: .1;
+}
+
+#about_desc{
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+
+/* Services Section  */
+
+#services, #projects{
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.service{
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #242424;
+  padding: 30px 50px 50px;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-solid{
+  color: #FFC107;
+  font-size: 2.5rem;
+}
+
+.service:hover{
+  background-color: #FFC107;
+}
+
+.service:hover p{
+  color: #000;
+}
+
+.service:hover .fa-solid{
+  color: #fff;
+}
+
+/* Project section  */
+
+.project{
+  width: 25vw;
+  min-width: 300px;
+  height: 25vh;
+  text-align: center;
+  color: #fff;
+  justify-content: center;
+  gap: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.project  a,
+.project p{
+  display: none;
+}
+
+.project .fa-solid{
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.project1{
+  background: url(../images/Food_company.png) center/cover;
+}
+
+.project2{
+  background: url(../images/Netflix_landingPage.png) center/cover;
+}
+
+.project3{
+  background: url(../images/Calculator.png) center/cover;
+}
+
+.project4{
+  background: url(../images/MakeNotes.png) center/cover;
+}
+
+.project:hover{
+  background: linear-gradient(to right, rgba(255, 194, 12, 0.585), rgba(255, 200, 35, 0.514));
+}
+
+.project:hover a,
+.project:hover p
+{
+  display: block;
+}
+
+/* Skills Section  */
+
+#skills{
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#skills .skill{
+  width: 20vw;
+  max-width: 250px;
+  min-width: 200px;
+  height: 25vh;
+}
+
+
+/* Contact section  */
+
+#contactSection form{
+  gap: 20px;
+  background-color: #fff;
+  padding: clamp(20px, 6vw, 50px);
+  width: 50%;
+}
+
+#contactSection form .btn{
+  min-width: 150px;
+}
+
+
+#contactSection input,
+#contactSection textarea{
+  color: #000;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+}
+
+/* Footer section  */
+
+footer a i{
+  font-size: 1rem;
+  transition: all .2s ease-in-out;
+}
+
+
+footer a:hover i{
+  transform: scale(2);
+}
+
+p{
+  text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+  #contactSection form{
+    width: 80%;
+  }
+}
+
+
+@media only screen and (max-width: 500px){
+  
+#hero .img{
+  width: 85%;
+  min-width: 320px;
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+}
+
+.greet{
+  color: #FFBD39;
+  font-size: 1.2rem;
+}
+
+
+}
