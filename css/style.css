@@ -128,6 +128,15 @@ body{
   transition: all 0.2s ease-in-out;
 }
 
+#services div{
+  max-width: 310px !important;
+}
+
+
+#services > :nth-child(3){
+  padding: 30px 60px 50px;
+}
+
 .fa-solid{
   color: #FFC107;
   font-size: 2.5rem;
@@ -270,6 +279,7 @@ p{
   color: #FFBD39;
   font-size: 1.2rem;
 }
+
 
 
 }
