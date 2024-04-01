@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <h1>What can i do for you?</h1>
+    
+  <div class="container">
+    <form id="hireForm" action="mailto:boharebanti@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="jobTitle">Job Title:</label>
+          <input type="text" id="jobTitle" name="jobTitle" required>
+        </div>
+        <div class="form-group">
+          <label for="jobDescription">Job Description:</label>
+          <textarea id="jobDescription" name="jobDescription" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>You want to hire me as</option>
+            <option value="Front-end">Front-end Developer</option>
+            <option value="Back-end">Back-end Developer</option>
+            <option value="Full-stack">Full-stack Developer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Budget:</label>
+          <input type="number" id="budget" name="budget" placeholder="In INR" required>
+        </div>
+        <div class="form-group">
+          <label for="file">Attach File:</label>
+          <input type="file" id="file" name="file">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      
+  </div>
+
+</body>
+</html>

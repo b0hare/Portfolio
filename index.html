@@ -53,7 +53,7 @@
           <p class="greet mb-0">Hello!</p>
           <h1 class="name display-3 fw-bold">I'm <span class="myName">Banti Bohare</span></h1>
           <h3 class="profes fs-3 text lead">A Web Developer</h3>
-          <button class="btn btn-warning">HIRE ME</button>
+          <button class="btn btn-warning" id="hire_btn" onclick="pageRedirect()">HIRE ME</button>
         </div>
 
         <div class="img">
@@ -216,10 +216,10 @@
       </p>
 
       <form action="mailto:boharebanti@gmail.com" method="post" enctype="text/plain" class="d-flex flex-column mt-4 al">
-        <input type="text" name="name" class="p-3 rounded form-control" placeholder="Your Name">
-        <input type="email" name="email" class="p-3 rounded form-control" placeholder="Your Email">
+        <input type="text" name="name" class="p-3 rounded form-control" placeholder="Your Name" required>
+        <input type="email" name="email" class="p-3 rounded form-control" placeholder="Your Email" required>
         <input type="text" name="subject" class="p-3 rounded form-control" placeholder="Subject">
-        <textarea name="message" class="p-3 rounded form-control mb-2" placeholder="Message" cols="30" rows="5"></textarea>
+        <textarea name="message" class="p-3 rounded form-control mb-2" placeholder="Message" cols="30" rows="5" required></textarea>
         <button class="btn btn-warning w-25 align-self-center">Send Message</button>
       </form>
 
