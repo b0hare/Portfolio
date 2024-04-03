@@ -23,7 +23,7 @@ body{
 
 .navbar-nav .nav-link {
   position: relative;
-  color: white; /* Change text color as needed */
+  color: white;
 }
 
 
@@ -34,7 +34,7 @@ body{
   left: 5px;
   width: 90%;
   height: 2px;
-  background-color: #FFC107; /* Yellow color */
+  background-color: #FFC107;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
@@ -45,6 +45,10 @@ body{
   transform: scaleX(1);
 }
 
+.navbar-nav .nav-link.clicked::after{
+  visibility: visible;
+  transform: scaleX(1);
+}
 
 #hero{
   position: relative;
